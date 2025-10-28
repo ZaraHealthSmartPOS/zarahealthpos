@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom theme helpers */
+:root{
+  --zara-lime: #AEEA00;
+  --zara-gray: #f3f4f6;
+}
+body { background-color: white; }
