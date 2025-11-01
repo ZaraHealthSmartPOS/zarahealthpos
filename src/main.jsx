@@ -1,10 +1,13 @@
+// src/main.jsx (example)
+import { testWrite } from './lib/testSupabase';
+testWrite();
+
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App'
+import { startSyncWorker } from './lib/offlineSync'
 import './index.css'
 
-createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
+startSyncWorker()
+
+createRoot(document.getElementById('root')).render(<App />)

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Inventory from "./Inventory";
 import Sales from "./Sales";
+import { testRead } from "./tests/testReadSupabase";
 
 export default function App() {
   const [page, setPage] = useState("sales");
@@ -16,6 +17,21 @@ export default function App() {
           </nav>
         </div>
       </header>
+
+      {/* ✅ TEST BUTTON PLACED HERE */}
+      <div className="p-4">
+        <button
+          onClick={testRead}
+          style={{
+            padding: "8px 12px",
+            border: "1px solid black",
+            marginBottom: "10px",
+            background: "white"
+          }}
+        >
+          Test Supabase Read
+        </button>
+      </div>
 
       {page === "inventory" ? <Inventory /> : <Sales />}
     </div>
